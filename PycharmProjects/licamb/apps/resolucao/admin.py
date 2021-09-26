@@ -1,33 +1,32 @@
 from django.contrib import admin
-from resolucao.models import (Divisao, Grupo, SubGrupo, Tipologia, Unidade_Medida)
-from resolucao.models import (Divisao, Grupo, SubGrupo, Tipologia)
+from apps.resolucao.models import *
 
 
-class DivisaoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'codigo', 'descricao')
-    search_fields = ('codigo', 'descricao')
-
-class GrupoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'codigo', 'divisao', 'descricao')
-    search_fields = ('codigo', 'divisao')
-
-class SubGrupoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'codigo', 'grupo', 'descricao')
-    search_fields = ('codigo', 'grupo', 'divisao')
-
-class TipologiaAdmin(admin.ModelAdmin):
-    list_display = ('id', 'codigo', 'subgrupo', 'descricao')
-    search_fields = ('codigo', 'subgrupo', 'divisao')
-
-class UnidadeMedidaAdmin(admin.ModelAdmin):
-    list_display = ('id', 'und_medida_desc')
-    search_fields = ('und_medida_desc',)
-
-admin.site.register(Divisao, DivisaoAdmin)
-admin.site.register(Grupo, GrupoAdmin)
-admin.site.register(SubGrupo, SubGrupoAdmin)
-admin.site.register(Tipologia, TipologiaAdmin)
-admin.site.register(Unidade_Medida, UnidadeMedidaAdmin)
+# class DivisaoAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'codigo', 'descricao')
+#     search_fields = ('codigo', 'descricao')
+#
+# class GrupoAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'codigo', 'divisao', 'descricao')
+#     search_fields = ('codigo', 'divisao')
+#
+# class SubGrupoAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'codigo', 'grupo', 'descricao')
+#     search_fields = ('codigo', 'grupo', 'divisao')
+#
+# class TipologiaAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'codigo', 'subgrupo', 'descricao')
+#     search_fields = ('codigo', 'subgrupo', 'divisao')
+#
+# class UnidadeMedidaAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'und_medida_desc')
+#     search_fields = ('und_medida_desc',)
+#
+# # admin.site.register(Divisao, DivisaoAdmin)
+# admin.site.register(Grupo, GrupoAdmin)
+# admin.site.register(SubGrupo, SubGrupoAdmin)
+# admin.site.register(Tipologia, TipologiaAdmin)
+# admin.site.register(Unidade_Medida, UnidadeMedidaAdmin)
 
 # class ProfileAdmin(admin.ModelAdmin):
 #     list_display = ('user', 'role', 'birth', 'specialtiesList', 'addressesList',)
